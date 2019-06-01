@@ -17,9 +17,9 @@ if __name__ == '__main__':
 	a = TamFam("session")
 	
 	if not os.path.isfile("%s.ttsession" % a.session):
-		l = a.phoneLogin(raw_input('Phone number: '))
-		ll = a.completePhoneLogin(l, raw_input('SMS Code: '))
-		name = ll['payload']['profile']['names'][0]['name']
+		x = a.phoneLogin(raw_input('Phone number: '))
+		l = a.completePhoneLogin(x, raw_input('SMS Code: '))
+		name = l['payload']['profile']['names'][0]['name']
 		print("Logged in as %s!" % name)
 	else:
 		l = a.loginFromSession()
