@@ -91,3 +91,12 @@ class TamFam:
 	
 	def createContact(self, phone):
 		return self.apiRequest(41, {"phone": phone})
+	
+	def createContact(self, phone):
+		return self.apiRequest(41, {"phone": phone})
+	
+	def removeContact(self, contactId):
+		self.apiRequest(34, {"contactId": contactId, "action": "REMOVE"})
+	
+	def addContact(self, contactId):
+		self.apiRequest(34, {"contactId": contactId, "action": "ADD"})
