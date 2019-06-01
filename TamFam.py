@@ -79,7 +79,7 @@ class TamFam:
 		return self.apiRequest(16, {"photoToken": token})
 		
 	def loginFromSession(self):
-		token = open('session.ttsession', 'r').read()
+		token = open('%s.ttsession' % self.session, 'r').read()
 		login = self.apiRequest(19, {"token": token,"userAgent":{"deviceType":"WEB","appVersion":"2.0.17","osVersion":"Windows","locale":"ru","deviceName":"Chrome","screen":"1024x768 2.0x","headerUserAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3810.0 Safari/537.36"},"chatsSync":1559393601918,"contactsSync":1559393110636,"presenceSync":1559393600,"configHash":"4a24a5f0-0000000000000000-c00001cc-0000000000000001-5f24db9d-0000000000000000-00000000-0"})
 		return login
 	
