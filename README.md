@@ -1,5 +1,6 @@
 # TamFam
 A python library to interact with TamTam's API
+
 NB: This is not meant to communicate with the BOT API, but rather with the official user API.
 
 # Dependencies
